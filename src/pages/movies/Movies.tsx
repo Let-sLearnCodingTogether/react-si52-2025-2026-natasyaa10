@@ -65,7 +65,16 @@ function Movies() {
                                 <td>{movies.judul}</td>
                                 <td>{movies.tahunRilis}</td>
                                 <td>{movies.sutradara}</td>
-                                <td><Button variant="danger" onClick={() => handleDelete(movies._id)}>Delete</Button></td>
+                                <td>
+                                    <NavLink
+                                        to={`/movie/edit-movie/${movies._id}`}
+                                        className="btn btn-primary">
+                                            Edit
+                                        </NavLink>
+                                        <Button variant="danger" onClick={() => handleDelete(movies._id)}>
+                                            Delete
+                                        </Button>
+                                </td>
                             </tr>
                         })
                     }
